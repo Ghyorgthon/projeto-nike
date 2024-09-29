@@ -24,8 +24,8 @@ body{
 .menu{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin:  50px auto;
+    justify-content: space-between;
+    margin: 25px;
 
 }
 .menu-logo img{
@@ -40,18 +40,21 @@ body{
 .menu-itens ul li{
     margin-left: 30px;
 }
+.menu-show{
+    display: none;
+}
 
 .content{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     position: relative;
     top: 50px;
 }
 
 .text-content{
-    width: 30%;
+    width: 40%;
 }
 .text-content h1{
     font-size: 62px;
@@ -76,9 +79,125 @@ body{
     width: 150px;
     font-weight: 600;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all .4s;
 
-}   
+}  
+.text-content button:hover{
+    background-color: #444444;
+    color: #fff;
+    transition: all .4s;
+} 
 
 .image-content img{
     margin: 0;
+}
+
+@media only screen and (max-width:1090px) {
+
+    .text-content{
+        width: 50%;
+        margin-left: 50px;
+    }
+    .image-content img{
+        width: 100%;
+    }
+    .text-content h1{
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+    .text-content h2{
+        font-size: 30px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        
+    }
+}
+@media only screen and (max-width:1000px) {
+    .text-content h1{
+        font-size: 45px;
+        text-transform: uppercase;
+    }
+    .menu{
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
+    .menu-logo img{
+        width: 70px;
+    }
+    .menu-itens{
+        position: relative;
+        right: 50px;
+    }
+    .text-content h2{
+        font-size: 22px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        
+    }
+}
+@media only screen and (max-width:845px) {
+    .text-content h1{
+        font-size: 38px;
+        text-transform: uppercase;
+    }
+    .text-content h2{
+        font-size: 18px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        
+    }
+}
+@media only screen and (max-width:761px) {
+    .text-content{
+        width: 70%;
+    }
+    .text-content h1{
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    .image-content img{
+        width: 85%;
+    }
+    .text-content h2{
+        font-size: 16px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        
+    }
+}
+@media only screen and (max-width:665px) {
+    .content{
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+    .text-content{
+        width: 70%;
+    }
+    .text-content h1{
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    .image-content img{
+        width: 70%;
+    }
+    .text-content h2{
+        font-size: 16px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        
+    }
+    .menu-itens{
+    display: none;
+    } 
+    .menu-show{
+        display: flex;
+        position: relative;
+        right: 50px;
+    }
+
+
+
 }
